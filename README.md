@@ -1,7 +1,6 @@
 # gaon
 
-----------
-## screenshot
+## preview
 
 ![screenshot1](./sample/1.png)
 ![screenshot2](./sample/2.png)
