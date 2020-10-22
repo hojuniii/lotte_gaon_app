@@ -1,16 +1,10 @@
 # gaon
 
-A new Flutter project.
+----------
+## screenshot
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![screenshot1](./sample/1.png)
+![screenshot2](./sample/2.png)
+![screenshot3](./sample/3.png)
+![screenshot4](./sample/4.png)
+![screenshot5](./sample/5.png)
