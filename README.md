@@ -1,6 +1,6 @@
-# gaon
+# lotte_gaon_app
 
-## web git repository
+## gaon web git repository
 [link](https://github.com/hojuniii/lotte_project) 👈🏻
 
 ## preview
