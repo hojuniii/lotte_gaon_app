@@ -70,18 +70,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 SliverList(
                   delegate: SliverChildBuilderDelegate((context, index) {
+                    provider.todayBoxs.sort((a, b) => a.startedAt.compareTo(b.startedAt));
                     return InkWell(
                       onTap: () async {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                maintainState: true,
-                                builder: (_) {
-                                  return AboutBoxScreen(
-                                    provider: provider,
-                                    qrText: provider.todayBoxs[index].boxNumber,
-                                  );
-                                }));
+                          context,
+                          MaterialPageRoute(
+                            maintainState: true,
+                            builder: (_) {
+                              return AboutBoxScreen(
+                                provider: provider,
+                                qrText: provider.todayBoxs[index].boxNumber,
+                              );
+                            },
+                          ),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 14, horizontal: 18),

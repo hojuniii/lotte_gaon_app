@@ -198,6 +198,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                     elevation: 0,
                                     onPressed: () {
                                       _formKey.currentState.save();
+
+                                      if (password != passwordAgain) {
+                                        showDialogByText(context, '비밀번호가 일치하지 않습니다');
+                                        return;
+                                      }
                                       setState(() async {
                                         String res = await provider.register(
                                             phone: phone,

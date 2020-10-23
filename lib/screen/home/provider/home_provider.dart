@@ -62,11 +62,9 @@ class HomeProvider extends ChangeNotifier {
       boxs = await auth.getBoxs(id: user.id);
       for (Box box in boxs) {
         String today = DateTime.now().toString().substring(0, 10);
-
-        //오늘 출발했거나 완료된 박스들을 넣어줌
         if (box.startedAt.toString().substring(0, 10) == today ||
             box.completedAt.toString().substring(0, 10) == today ||
-            box.status != 'C') {
+            box.status == 'D') {
           todayBoxs.add(box);
           if (box.status == 'C') completedBoxCount++;
         }

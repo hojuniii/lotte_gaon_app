@@ -133,7 +133,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
                                 width: 150,
                               );
                             },
-                            fit: BoxFit.fill,
+                            fit: BoxFit.cover,
                             height: deviceHeight * 0.2,
                             width: deviceWidth * 0.2,
                             imageUrl: provider.profile.profileImage,

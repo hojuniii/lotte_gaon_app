@@ -146,13 +146,18 @@ class _AboutBoxScreenState extends State<AboutBoxScreen> {
                           ),
                         ),
                       ),
-                      Text(
-                        provider.user.id == provider.capturedBox.userId
-                            ? provider.capturedBox.customerLocation
-                            : '***',
-                        style: TextStyle(
-                          color: AppColor.mainGreyColor,
-                          fontSize: 16,
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Flexible(
+                        child: Text(
+                          provider.user.id == provider.capturedBox.userId
+                              ? provider.capturedBox.customerLocation
+                              : '***',
+                          style: TextStyle(
+                            color: AppColor.mainGreyColor,
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ],

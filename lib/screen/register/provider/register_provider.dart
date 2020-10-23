@@ -10,6 +10,7 @@ class RegisterProvider extends ChangeNotifier {
   Future<String> register({String phone, String password, String passwordAgain}) async {
     loading = true;
     String res = await authenticationService.register(phone: phone, password: password);
+
     if (res == null) {
       loading = false;
       notifyListeners();

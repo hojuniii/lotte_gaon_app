@@ -82,6 +82,7 @@ class _BoxHistoryScreenState extends State<BoxHistoryScreen> {
                     itemBuilder: (context, index) {
                       if (provider.month.elementAt(monthIndex) ==
                           provider.boxs[index].startedAt.substring(0, 10)) {
+                        provider.boxs.sort((a, b) => a.startedAt.compareTo(b.startedAt));
                         return InkWell(
                           onTap: () async {
                             Navigator.push(
@@ -137,7 +138,7 @@ class _BoxHistoryScreenState extends State<BoxHistoryScreen> {
                                       child: Text(
                                         provider.boxs[index].completedAt != null
                                             ? provider.boxs[index].completedAt
-                                            : '배송중',
+                                            : '${provider.boxs[index].startedAt}',
                                         style: TextStyle(
                                           fontSize: 14,
                                           color: AppColor.mainOrangeColor,
@@ -153,8 +154,12 @@ class _BoxHistoryScreenState extends State<BoxHistoryScreen> {
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            provider.boxs[index].status == 'C' ? '배송완료' : '',
-                                            style: TextStyle(),
+                                            provider.boxs[index].status == 'C' ? '배송완료' : '배송중',
+                                            style: TextStyle(
+                                              color: provider.boxs[index].status == 'C'
+                                                  ? AppColor.mainRedColor
+                                                  : AppColor.mainGreyColor,
+                                            ),
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                         ],

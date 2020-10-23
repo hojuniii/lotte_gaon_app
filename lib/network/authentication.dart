@@ -48,9 +48,12 @@ class AuthenticationService {
       } else {
         return message;
       }
-    } catch (e) {
-      Exception(e);
-      return '오류가 발생했습니다';
+    } on DioError catch (e) {
+      if (e.response.statusCode == 400) {
+        return '이미 존재하는 휴대폰 번호입니다';
+      } else {
+        return '회원가입에 실패했습니다';
+      }
     }
   }
 
